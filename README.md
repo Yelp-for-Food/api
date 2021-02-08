@@ -6,7 +6,7 @@ Yelp For Dishes is a food recommendation/rating app that allows users to rate in
 
 Python 3.8.5
 Peewee
-PostgreSQ
+PostgreSQL
 
 ## Develop
 
@@ -14,6 +14,10 @@ To develop, ensure you are running a postgres database, we recommend running:
 ```
 docker run --name felp -p 5432:5432 -e POSTGRES_PASSWORD=dev -e POSTGRES_DB=felp -d postgres
 ```
+
+## How it works
+
+<img src="db concept 1.png"></img>
 
 ## Team
 [Aldo10012](https://github.com/orgs/Yelp-for-Food/people/Aldo10012)
