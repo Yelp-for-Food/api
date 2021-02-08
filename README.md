@@ -8,7 +8,12 @@ Python 3.8.5
 
 PostgreSQL
 
+## Develop
 
+To develop, ensure you are running a postgres database, we recommend running:
+```
+docker run --name felp -p 5432:5432 -e POSTGRES_PASSWORD=dev -e POSTGRES_DB=felp -d postgres
+```
 
 ## Team
 [Aldo10012](https://github.com/orgs/Yelp-for-Food/people/Aldo10012)
