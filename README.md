@@ -6,7 +6,7 @@ Yelp For Dishes is a food recommendation/rating app that allows users to rate in
 
 Python 3.8.5
 Peewee
-PostgreSQL
+PostgreSQ
 
 ## Develop
 
