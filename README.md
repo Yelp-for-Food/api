@@ -1,12 +1,12 @@
 # Yelp For Dishes (Working Title)
 
-Yelp For Dishes is a food recommendation/rating app that allows users to rate individual dishes at restaurants, and then aggregates that type of dish across restaurants so users can find the best version of that dish regardless of restaurant.
+Yelp For Dishes is a food recommendation/rating app that allows users to rate individual dishes at restaurants on a 5-star system, and then aggregates that type of dish across restaurants so users can find the best version of that dish regardless of restaurant. Users are able to request new dishes to add to the database but require approval to eliminate risk from bad actors. 
 
 ## Languages/Tech Used
 
-Python 3.9.0
-Peewee
-PostgreSQL
+[Python 3.9.0](https://www.python.org/)
+[Peewee](https://github.com/coleifer/peewee)
+[PostgreSQL](https://github.com/postgres/postgres)
 
 ## Develop
 
