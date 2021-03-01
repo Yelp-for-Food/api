@@ -18,7 +18,6 @@ class User(BaseModel):
         authjwt_secret_key: str = os.getenv("SECRET") or "indev"
 
     class UserBase(PydanticBaseModel):  # Our user.
-        id: int
         first_name: str
         last_name: Optional[str]
         email: Optional[str]
