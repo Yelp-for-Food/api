@@ -20,7 +20,7 @@ class Meal(BaseModel):
 
     @staticmethod
     def get_all_meals():
-        return Meal.select().iterator()
+        return list(Meal.select())
 
     @staticmethod
     def get_meal_by_name(name: str):

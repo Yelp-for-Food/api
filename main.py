@@ -3,6 +3,7 @@ from fastapi import FastAPI, Depends, HTTPException
 from ipu.sql import db, db_state_default
 from ipu.models import MODELS
 from ipu.models.meal import Meal
+from typing import List
 
 db.connect()
 db.create_tables(MODELS)
@@ -30,10 +31,9 @@ async def root():
     return "Hello, World!"
 
 
-@app.get("/meals", response_model=Meal.MealSchema, dependencies=[Depends(get_db)])
+@app.get("/meals", response_model=List[Meal.MealSchema], dependencies=[Depends(get_db)])
 async def meals():
-    res = Meal.get()
-    return res
+    return Meal.get_all_meals()
 
 
 @app.get(
