@@ -1,6 +1,6 @@
 from . import BaseModel
 from felp.sql import PeeweeGetterDict
-from peewee import TextField
+from peewee import IntegerField, TextField
 from pydantic import BaseModel as PydanticBaseModel
 
 
@@ -10,6 +10,7 @@ class Meal(BaseModel):
     category = TextField()
     area = TextField()
     thumb = TextField()
+    rating = IntegerField(default=0)
 
     @staticmethod
     def get_meal(meal_id):

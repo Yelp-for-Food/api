@@ -46,6 +46,3 @@ async def meal_id(meal_id: int):
         raise HTTPException(status_code=404, detail="Meal not found")
     else:
         return meal
-
-
-# http://play.dejaydev.com:8000
