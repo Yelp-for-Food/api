@@ -1,5 +1,5 @@
 from . import BaseModel
-from felp.sql import PeeweeGetterDict
+from ipu.sql import PeeweeGetterDict
 from peewee import IntegerField, TextField
 from pydantic import BaseModel as PydanticBaseModel
 

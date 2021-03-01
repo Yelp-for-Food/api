@@ -1,10 +1,10 @@
 from peewee import Model
-from felp.sql import db
+from ipu.sql import db
 
 MODELS = []
 
-class BaseModel(Model):
 
+class BaseModel(Model):
     class Meta:
         database = db
 

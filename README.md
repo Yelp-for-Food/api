@@ -1,6 +1,6 @@
 # Yelp For Dishes (Working Title)
 
-Yelp For Dishes is a food recommendation/rating app that allows users to rate individual dishes at restaurants on a 5-star system, and then aggregates that type of dish across restaurants so users can find the best version of that dish regardless of restaurant. Users are able to request new dishes to add to the database but require approval to eliminate risk from bad actors. 
+Yelp For Dishes is a food recommendation/rating app that allows users to rate individual dishes at restaurants on a 5-star system, and then aggregates that type of dish across restaurants so users can find the best version of that dish regardless of restaurant. Users are able to request new dishes to add to the database but require approval to eliminate risk from bad actors.
 
 ## Languages/Tech Used
 
@@ -12,7 +12,7 @@ Yelp For Dishes is a food recommendation/rating app that allows users to rate in
 
 To develop, ensure you are running a postgres database, we recommend running:
 ```
-docker run --name felp -p 5432:5432 -e POSTGRES_PASSWORD=dev -e POSTGRES_DB=felp -d postgres
+docker run --name ipu -p 5432:5432 -e POSTGRES_PASSWORD=dev -e POSTGRES_DB=ipu -d postgres
 ```
 
 ## How it works

@@ -1,8 +1,8 @@
 # Hi :)
 from fastapi import FastAPI, Depends, HTTPException
-from felp.sql import db, db_state_default
-from felp.models import MODELS
-from felp.models.meal import Meal
+from ipu.sql import db, db_state_default
+from ipu.models import MODELS
+from ipu.models.meal import Meal
 
 db.connect()
 db.create_tables(MODELS)
