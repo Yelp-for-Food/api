@@ -7,6 +7,7 @@ from pydantic.utils import GetterDict
 db_state_default = {"closed": None, "conn": None, "ctx": None, "transactions": None}
 db_state = ContextVar("db_state", default=db_state_default.copy())
 
+
 class PeeweeConnectionState(_ConnectionState):
     def __init__(self, **kwargs):
         super().__setattr__("_state", db_state)
@@ -17,7 +18,8 @@ class PeeweeConnectionState(_ConnectionState):
 
     def __getattr__(self, name):
         return self._state.get()[name]
-        
+
+
 class PeeweeGetterDict(GetterDict):
     def get(self, key: Any, default: Any = None):
         res = getattr(self._obj, key, default)
@@ -25,6 +27,7 @@ class PeeweeGetterDict(GetterDict):
             return list(res)
         return res
 
-db = PostgresqlDatabase('felp', user='postgres', password='dev', host='localhost')
+
+db = PostgresqlDatabase("felp", user="postgres", password="dev", host="localhost")
 
 db._state = PeeweeConnectionState()

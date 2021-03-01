@@ -27,7 +27,7 @@ def get_db(db_state=Depends(reset_db_state)):
 
 @app.get("/")
 async def root():
-    return "a"
+    return "Hello, World!"
 
 
 @app.get("/meals", response_model=Meal._MealBase, dependencies=[Depends(get_db)])
@@ -46,3 +46,6 @@ async def meal_id(meal_id: int):
         raise HTTPException(status_code=404, detail="Meal not found")
     else:
         return meal
+
+
+# http://play.dejaydev.com:8000
