@@ -35,6 +35,7 @@ class Meal(BaseModel):
         category: str
         area: str
         thumb: str
+        rating: int
 
         class Config:
             orm_mode = True
@@ -47,8 +48,4 @@ class Meal(BaseModel):
         pass
 
     class MealSchema(_MealBase):  # The thing, but what is returned
-        name: str
-        category: str
-        area: str
-        thumb: str
         id: int

@@ -30,7 +30,7 @@ async def root():
     return "Hello, World!"
 
 
-@app.get("/meals", response_model=Meal._MealBase, dependencies=[Depends(get_db)])
+@app.get("/meals", response_model=Meal.MealSchema, dependencies=[Depends(get_db)])
 async def meals():
     res = Meal.get()
     return res
