@@ -28,6 +28,5 @@ class PeeweeGetterDict(GetterDict):
         return res
 
 
-db = PostgresqlDatabase("felp", user="postgres", password="dev", host="localhost")
-
+db = PostgresqlDatabase("ipu", user="postgres", password="dev", host="localhost")
 db._state = PeeweeConnectionState()

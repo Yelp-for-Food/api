@@ -1,3 +1,6 @@
 fastapi==0.63.0
 peewee==3.14.0
 psycopg2-binary==2.8.6
+fastapi-jwt-auth
+uvicorn[standard]
+bcrypt

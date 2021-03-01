@@ -15,7 +15,7 @@ def create_tables():
 if not Meal.table_exists():
     create_tables()
 elif os.getenv("FORCE") != "yes":
-    meal = Meal.get(name="Corba")
+    # meal = Meal.get(name="Corba")
     print("Cancelling execution to ensure data integrity. Pass FORCE to continue.")
     sys.exit()
 

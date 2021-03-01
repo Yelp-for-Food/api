@@ -1,8 +1,10 @@
-from . import BaseModel, PeeweeGetterDict
-from .meal import Meal
-from typing import List
-from peewee import TextField, JSONField
+from . import BaseModel
+from ipu.sql import PeeweeGetterDict
+from typing import List, Optional
+from peewee import TextField
 from pydantic import BaseModel as PydanticBaseModel
+import os
+
 
 @BaseModel.register
 class User(BaseModel):
@@ -10,20 +12,17 @@ class User(BaseModel):
     last_name = TextField(null=True)
     email = TextField(null=True)
     username = TextField()
-    password = TextField() # TODO: What else does a user need?
-    liked_meals = JSONField(default={})
+    password = TextField()
 
-    class _UserBase(PydanticBaseModel): # Our user.
-        email: str
+    class Settings(PydanticBaseModel):
+        authjwt_secret_key: str = os.getenv("SECRET") or "indev"
 
-    class UserCreate(_UserBase):
-        password: str # This is only needed at create time, so who cares!
+    class UserBase(PydanticBaseModel):  # Our user.
+        id: int
+        first_name: str
+        last_name: Optional[str]
+        email: Optional[str]
+        username: str
 
-    class UserSchema(_UserBase):
-        id: int # Peeweee makes this
-        is_active: bool
-        liked_meals: List[Meal.MealSchema] = []
-
-        class Config:
-            orm_mode = True
-            getter_dict = PeeweeGetterDict
+    class UserAuth(UserBase):
+        password: str  # This is only needed at create and login time
