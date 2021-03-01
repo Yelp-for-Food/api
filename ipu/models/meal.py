@@ -17,8 +17,6 @@ class Meal(BaseModel):
 
     @staticmethod
     def get_meal(meal_id):
-        # Meal.get(Meal.name == "name")
-        # Meal.get_by_id(id)
         return Meal.get_by_id(meal_id)
 
     @staticmethod
@@ -42,10 +40,6 @@ class Meal(BaseModel):
 
         class Config:
             orm_mode = True
-
-        # getter_dict = (
-        #    PeeweeGetterDict  # Does some magic to turn lists into.. nothing.
-        # )
 
     class MealCreate(_MealBase):  # The thing, but what it takes to make it
         pass
